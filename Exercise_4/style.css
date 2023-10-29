@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --color: aqua;
+    --seccolor: green;
+    --bgcolor: yellow;
+}
+.Nav{
+    display: flex;
+    list-style-type: none;
+    margin: 5px 0 0 10px;
+    border: 2px solid var(--seccolor);
+    background-color: var(--bgcolor);
+}
+li{
+    --bgcolor: rgb(230, 59, 40);
+    margin: 0 0 0 7px;
+    padding: 3px;
+    color: var(--color);
+    background-color: var(--bgcolor);
+}
