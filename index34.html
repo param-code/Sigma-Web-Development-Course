@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        .cards{
+            border: 3px solid black;
+            display: flow-root;
+        }
+        img{
+            float: left;
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(2){
+            background-color: aqua;
+            clear:  left; /* clear left kisi ko left mein nhi chahta and right wala right mein par opposite allowed pr both se dono mein block kr skte h */ 
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://smallboatsmonthly.com/wp-content/uploads/2023/01/1109216_cmyk.jpg" width="150px" alt="Boat">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quam minima sequi, dignissimos, optio officiis ex vel similique eligendi minus rem tempore fugit excepturi esse doloribus ea est explicabo mollitia.</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>
