@@ -5,19 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More on CSS Selectors</title>
     <style>
-        .box:first-child{
+        /* .box:first-child{
             background-color: red;
         }
         .box::first-line{
             color: yellow ;
+        } */
+        .boxes *{
+            color: blue;
+            border: 2px solid red;
+        }
+        p,a,.box,[data-color="Primary"]{
+            margin-top: 45px; /*bahar se space*/
+            padding-top: 45px; /*andar se space*/
+        }
+        .box:nth-child(even){
+            background-color: yellowgreen;
+        }
+        .box:nth-last-child(1){
+            background-color: aqua;
+        }
+        .boxes::before{
+            content: "Harry is Good";
+            color: blue;
+        }
+        .boxes::after{
+            content: "Sigma Course is also Good";
+            color: red ;
+        }
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+        .box::first-letter{
+            color: peru;
+            font-size: 50px;
+        }
+        input::placeholder{
+            color: blue;
         }
     </style>
 </head>
 <body>
     <div class="boxes">
-        <div class="box">Hey! I am a Box Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam harum tenetur delectus a, saepe ad. Dignissimos dolores excepturi omnis minima ullam? Mollitia commodi earum sunt facilis deleniti fugit voluptates!</div>
+        <div data-color="Primary" class="box">Hey! I am a Box Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam harum tenetur delectus a, saepe ad. Dignissimos dolores excepturi omnis minima ullam? Mollitia commodi earum sunt facilis deleniti fugit voluptates!</div>
         <div class="box">Hey! I am a Box</div>
         <div class="box">Hey! I am a Box</div>
+        <input type="text" placeholder="Type your text">
     </div>
 </body>
 </html>
